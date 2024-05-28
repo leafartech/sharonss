@@ -9,7 +9,11 @@ import Image from "next/image";
 
 interface FormProps {
   searchParams: {
-      utm_content: string
+    utm_content: string
+    utm_campaign: string
+    utm_term: string
+    utm_source: string
+    utm_medium: string
   }
 }
 
@@ -137,11 +141,11 @@ export default function Page({ searchParams }: FormProps) {
           className="px-4"
         >
           <HeroFlex
-          reverse={true}
+            reverse={true}
             height={1744}
             width={1080}
             imagePath="bg4.png"
-            
+
           >
             <div className="flex flex-col gap-4">
               <h4 className="font-bold text-2xl sm:text-4xl text-my">Para quem é o treinamento</h4>
