@@ -41,13 +41,13 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                 inpt3.value = utm_campaign || ''
                 inpt4.value = utm_content || ''
                 inpt5.value = utm_term || ''
-            }, 1000)
+            }, 1500)
         }
     }, [cont])
 
     return (
-        <div className="w-full">
-            <div id="_forms_19" className={`_form_19 max-w-sm -translate-y-12`}></div>
+        <div className="w-full h-[256px]">
+            <div id="_forms_19" className={`_form_19 max-w-sm -translate-y-4`}></div>
         </div>
     )
 }

@@ -5,7 +5,7 @@ interface ButtonProps {
 export function Button({ type }: ButtonProps) {
     if (type === 'redirect') {
         return (
-            <a href="#forms" className="max-w-md w-full bg-[#5484ff] box py-4 sm:px-24 rounded-full font-extrabold text-lg text-white uppercase">Quero participar</a>
+            <a href="#forms" className="text-center max-w-md w-full bg-[#5484ff] box py-4 sm:px-24 rounded-full font-extrabold text-lg text-white uppercase">Quero participar</a>
         )
     }
     return (
