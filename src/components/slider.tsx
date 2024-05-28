@@ -36,7 +36,7 @@ export function Slider() {
             className="mySwiper flex items-center"
         >
             {carouselData.map((item, index) => (
-                <SwiperSlide className="">
+                <SwiperSlide className="" key={index}>
                     <div className="w-[256px]">
                         <Image
                             src={`/images/marcas/${item.imagePath}`}
