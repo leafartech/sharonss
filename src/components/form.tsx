@@ -1,21 +1,18 @@
 'use client'
 
-import { useParams, usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 interface FormProps {
     searchParams: {
-        utm_content: string
-        utm_campaign: string
-        utm_term: string
-        utm_source: string
-        utm_medium: string
+      utm_content?: string
+      utm_campaign?: string
+      utm_term?: string
+      utm_source?: string
+      utm_medium?: string
     }
-}
+  }
 
 export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, utm_source, utm_term } }: FormProps) {
-    const pathname = usePathname()
-    const params = useParams()
     let cont = 0
     useEffect(() => {
         if (cont === 0) {

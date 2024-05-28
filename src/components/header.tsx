@@ -1,16 +1,15 @@
 import Image from "next/image";
-import { Button } from "./button";
 import { Form } from "./form";
 
 interface FormProps {
     searchParams: {
-        utm_content: string
-        utm_campaign: string
-        utm_term: string
-        utm_source: string
-        utm_medium: string
+      utm_content?: string
+      utm_campaign?: string
+      utm_term?: string
+      utm_source?: string
+      utm_medium?: string
     }
-}
+  }
 
 export function Header({ searchParams }: FormProps) {
     return (
