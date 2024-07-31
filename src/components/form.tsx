@@ -15,6 +15,7 @@ interface FormProps {
 
 export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, utm_source, utm_term, pagina } }: FormProps) {
     let cont = 0
+    console.log(utm_campaign)
     useEffect(() => {
         if (cont === 0) {
             const script = document.createElement('script');
@@ -27,7 +28,7 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
             cont++;
         }
     }, []);
-
+    
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setTimeout(() => {
@@ -44,7 +45,8 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                 inpt3.value = utm_campaign || 'AQUI'
                 inpt4.value = utm_content || 'AQUI'
                 inpt5.value = utm_term || 'AQUI'
-            }, 1500)
+                console.log(inpt4.value)
+            }, 2000)
         }
     }, [cont])
 
