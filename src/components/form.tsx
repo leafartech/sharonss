@@ -39,13 +39,12 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                 const inpt4 = document.getElementById('field[86]') as HTMLInputElement // utmcontent
                 const inpt5 = document.getElementById('field[90]') as HTMLInputElement // utmterm
 
-                inpt0.value = pagina || 'AQUI'
-                inpt1.value = utm_source || 'AQUI'
-                inpt2.value = utm_medium || 'AQUI'
-                inpt3.value = utm_campaign || 'AQUI'
-                inpt4.value = utm_content || 'AQUI'
-                inpt5.value = utm_term || 'AQUI'
-                console.log(inpt4.value)
+                inpt0.value = pagina || 'nao-traqueado'
+                inpt1.value = utm_source || 'nao-traqueado'
+                inpt2.value = utm_medium || 'nao-traqueado'
+                inpt3.value = utm_campaign || 'nao-traqueado'
+                inpt4.value = utm_content || 'nao-traqueado'
+                inpt5.value = utm_term || 'nao-traqueado'
             }, 2000)
         }
     }, [cont])
