@@ -1,5 +1,6 @@
 'use client'
 
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 interface FormProps {
@@ -15,7 +16,7 @@ interface FormProps {
 
 export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, utm_source, utm_term, pagina } }: FormProps) {
     let cont = 0
-    console.log(utm_campaign)
+    const pag = usePathname().split('/')
     useEffect(() => {
         if (cont === 0) {
             const script = document.createElement('script');
@@ -39,7 +40,7 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                 const inpt4 = document.getElementById('field[86]') as HTMLInputElement // utmcontent
                 const inpt5 = document.getElementById('field[90]') as HTMLInputElement // utmterm
 
-                inpt0.value = pagina || 'nao-traqueado'
+                inpt0.value = pag[1] || 'nao-traqueado'
                 inpt1.value = utm_source || 'nao-traqueado'
                 inpt2.value = utm_medium || 'nao-traqueado'
                 inpt3.value = utm_campaign || 'nao-traqueado'
