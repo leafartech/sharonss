@@ -44,13 +44,6 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                 inpt3.value = utm_campaign || ''
                 inpt4.value = utm_content || ''
                 inpt5.value = utm_term || ''
-
-                inpt0.value = pagina || ''
-                inpt1.value = utm_source || ''
-                inpt2.value = utm_medium || ''
-                inpt3.value = utm_campaign || ''
-                inpt4.value = utm_content || ''
-                inpt5.value = utm_term || ''
             }, 1500)
         }
     }, [cont])
