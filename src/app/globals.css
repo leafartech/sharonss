@@ -70,6 +70,9 @@ form {
     padding: 0!important;
     margin: 0!important;
 }
+form ._form-content {
+  background: #1e2140!important
+}
 #_forms_27 {
   width: 100%
 }
@@ -137,3 +140,43 @@ form ._form-content button._submit {
     0 36.502px 29.201px rgba(83, 133, 255, 0.21), 
     0 100px 80px rgba(83, 133, 255, 0.3);
 }
+
+/* From Uiverse.io by barisdogansutcu */ 
+svg.loader {
+  width: 3.25em;
+  transform-origin: center;
+  animation: rotate4 2s linear infinite;
+ }
+ 
+ svg.loader circle {
+  fill: none;
+  stroke: hsl(214, 97%, 59%);
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+ }
+ 
+ @keyframes rotate4 {
+  100% {
+   transform: rotate(360deg);
+  }
+ }
+ 
+ @keyframes dash4 {
+  0% {
+   stroke-dasharray: 1, 200;
+   stroke-dashoffset: 0;
+  }
+ 
+  50% {
+   stroke-dasharray: 90, 200;
+   stroke-dashoffset: -35px;
+  }
+ 
+  100% {
+   stroke-dashoffset: -125px;
+  }
+ }
+ 

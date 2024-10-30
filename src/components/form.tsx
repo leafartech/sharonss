@@ -29,7 +29,7 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
             cont++;
         }
     }, []);
-    
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setTimeout(() => {
@@ -51,8 +51,13 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
     }, [cont])
 
     return (
-        <div className="w-full h-[256px]">
-            <div id="_forms_27" className={`_form_27 max-w-sm -translate-y-4`}></div>
+        <div className="relative w-full h-[256px]">
+            <div className="absolute left-0 top-0 h-[180px] w-[384px] flex items-center justify-center">
+                <svg className="loader" viewBox="25 25 50 50">
+                    <circle r="20" cy="50" cx="50"></circle>
+                </svg>
+            </div>
+            <div id="_forms_27" className={`_form_27 max-w-sm -translate-y-4 z-50`}></div>
         </div>
     )
 }
