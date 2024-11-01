@@ -84,7 +84,7 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
 
     useEffect(() => {
         // Monitor for the #phone input and insert the DDI <select> when detected
-        setTimeout(() => {}, 200)
+        setTimeout(() => { }, 200)
 
         const insertSelectIntoPhoneInput = () => {
             const phoneInput = document.querySelector('#phone') as HTMLInputElement;
@@ -156,9 +156,6 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                 event.preventDefault()
 
                 const phoneInput = document.getElementById('phone') as HTMLInputElement;
-                // if (phoneInput && userDDI && !phoneInput.value.startsWith(userDDI)) {
-                //     phoneInput.value = `${userDDI} ${phoneInput.value}`;
-                // }
 
                 if (phoneInput && userDDI) {
                     // Remover qualquer DDI antigo do valor do telefone
@@ -167,16 +164,20 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                     phoneInput.value = `${userDDI} ${phoneInput.value}`;
                 }
 
+                submitButton.click()
+
                 const email = document.querySelector('#email') as HTMLInputElement
 
-                const thankYouURL = `https://duasporuma.com.br/obrigada/?email=${email.value}`;
-                window.location.href = thankYouURL;
+                setTimeout(() => {
+                    const thankYouURL = `https://duasporuma.com.br/obrigada/?email=${email.value}`;
+                    window.location.href = thankYouURL;
+                }, 1000);
             });
         }
 
         return () => {
             if (submitButton) {
-                submitButton.removeEventListener('click', () => {});
+                submitButton.removeEventListener('click', () => { });
             }
         };
     }, [userDDI]);
