@@ -156,6 +156,7 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                 event.preventDefault()
 
                 const phoneInput = document.getElementById('phone') as HTMLInputElement;
+                const form = document.querySelector('form[id^="_form_"]') as HTMLFormElement;
 
                 if (phoneInput && userDDI) {
                     // Remover qualquer DDI antigo do valor do telefone
@@ -164,6 +165,7 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                     phoneInput.value = `${userDDI} ${phoneInput.value}`;
                 }
 
+                form.submit()
                 submitButton.click()
 
                 const email = document.querySelector('#email') as HTMLInputElement
