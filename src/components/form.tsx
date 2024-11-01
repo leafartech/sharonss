@@ -32,9 +32,14 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
 
                 if (selectElement) {
                     selectElement.value = userData.ddi;
-                    // Atualizar o texto da opção selecionada para exibir apenas o DDI do usuário
+
+                    // Atualizar o texto da opção selecionada para mostrar apenas o DDI do usuário
                     Array.from(selectElement.options).forEach(option => {
-                        option.text = option.value === userData.ddi ? userData.ddi : `${europeanCountriesDDI.find(ddi => ddi.ddi === option.value)?.country} (${option.value})`;
+                        if (option.value === userData.ddi) {
+                            option.text = userData.ddi; // Exibir apenas o DDI na opção selecionada
+                        } else {
+                            option.text = `${europeanCountriesDDI.find(ddi => ddi.ddi === option.value)?.country} (${option.value})`;
+                        }
                     });
                 }
             })
@@ -148,6 +153,8 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
         const submitButton = document.getElementById('_form_27_submit') as HTMLButtonElement;
         if (submitButton) {
             submitButton.addEventListener('click', (event) => {
+                event.preventDefault()
+
                 const phoneInput = document.getElementById('phone') as HTMLInputElement;
                 // if (phoneInput && userDDI && !phoneInput.value.startsWith(userDDI)) {
                 //     phoneInput.value = `${userDDI} ${phoneInput.value}`;
@@ -159,6 +166,11 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                     // Adicionar o DDI atual selecionado
                     phoneInput.value = `${userDDI} ${phoneInput.value}`;
                 }
+
+                const email = document.querySelector('#email') as HTMLInputElement
+
+                const thankYouURL = `https://duasporuma.com.br/obrigada/?email=${email.value}`;
+                window.location.href = thankYouURL;
             });
         }
 
