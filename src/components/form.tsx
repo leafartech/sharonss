@@ -149,7 +149,14 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
         if (submitButton) {
             submitButton.addEventListener('click', (event) => {
                 const phoneInput = document.getElementById('phone') as HTMLInputElement;
-                if (phoneInput && userDDI && !phoneInput.value.startsWith(userDDI)) {
+                // if (phoneInput && userDDI && !phoneInput.value.startsWith(userDDI)) {
+                //     phoneInput.value = `${userDDI} ${phoneInput.value}`;
+                // }
+
+                if (phoneInput && userDDI) {
+                    // Remover qualquer DDI antigo do valor do telefone
+                    phoneInput.value = phoneInput.value.replace(/^\+\d+\s*/, '');
+                    // Adicionar o DDI atual selecionado
                     phoneInput.value = `${userDDI} ${phoneInput.value}`;
                 }
             });
