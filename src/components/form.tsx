@@ -29,18 +29,22 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                 setUserDDI(userData.ddi);
 
                 const selectElement = document.getElementById('ddi-select') as HTMLSelectElement;
+            
 
                 if (selectElement) {
-                    selectElement.value = userData.ddi;
 
-                    // Atualizar o texto da opção selecionada para mostrar apenas o DDI do usuário
-                    Array.from(selectElement.options).forEach(option => {
-                        if (option.value === userData.ddi) {
-                            option.text = userData.ddi; // Exibir apenas o DDI na opção selecionada
-                        } else {
-                            option.text = `${europeanCountriesDDI.find(ddi => ddi.ddi === option.value)?.country} (${option.value})`;
-                        }
-                    });
+                    setTimeout(() => {
+                        selectElement.value = userData.ddi;
+
+                        // Atualizar o texto da opção selecionada para mostrar apenas o DDI do usuário
+                        Array.from(selectElement.options).forEach(option => {
+                            if (option.value === userData.ddi) {
+                                option.text = userData.ddi; // Exibir apenas o DDI na opção selecionada
+                            } else {
+                                option.text = `${europeanCountriesDDI.find(ddi => ddi.ddi === option.value)?.country} (${option.value})`;
+                            }
+                        });
+                    }, 200)
                 }
             })
             .catch(error => console.error('Error fetching location:', error));
