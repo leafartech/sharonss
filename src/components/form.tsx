@@ -21,23 +21,34 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
 
     useEffect(() => {
         // Fetch the user's location and set the default DDI
-        fetch('https://ipapi.co/json/')
+        fetch('https://ipinfo.io/json?token=30e04fddb7778d')
             .then(async res => {
                 const response = await res.json();
-                const userData = { country: response.country_name, ddi: response.country_calling_code };
+
+                const userCountryData = europeanCountriesDDI.find(
+                    (ddi) => ddi.code === response.country
+                );
+
+                const userData = userCountryData
+
+                //@ts-ignore
                 setSelectedDDI(userData);
+                //@ts-ignore
                 setUserDDI(userData.ddi);
-
+                
                 const selectElement = document.getElementById('ddi-select') as HTMLSelectElement;
-
+                
                 if (selectElement) {
-
+                    
                     setTimeout(() => {
+                        //@ts-ignore
                         selectElement.value = userData.ddi;
-
+                        
                         // Atualizar o texto da opção selecionada para mostrar apenas o DDI do usuário
                         Array.from(selectElement.options).forEach(option => {
+                            //@ts-ignore
                             if (option.value === userData.ddi) {
+                                //@ts-ignore
                                 option.text = userData.ddi; // Exibir apenas o DDI na opção selecionada
                             } else {
                                 option.text = `${europeanCountriesDDI.find(ddi => ddi.ddi === option.value)?.country} (${option.value})`;
@@ -153,11 +164,10 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
 
     useEffect(() => {
         // Adicionar DDI ao telefone ao enviar o formulário
-        const submitButton = document.getElementById('_form_27_submit') as HTMLButtonElement;
+        const submitButton = document.getElementById('_form_30_submit') as HTMLButtonElement;
         if (submitButton) {
             submitButton.addEventListener('click', (event) => {
                 event.preventDefault()
-                console.log('aqui')
 
                 const phoneInput = document.getElementById('phone') as HTMLInputElement;
                 const form = document.querySelector('form[id^="_form_"]') as HTMLFormElement;
@@ -175,7 +185,6 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                 const email = document.querySelector('#email') as HTMLInputElement
 
                 setTimeout(() => {
-                console.log('aqui2')
                     const thankYouURL = `https://duasporuma.com.br/obrigada/?email=${email.value}`;
                     window.location.href = thankYouURL;
                 }, 1000);
