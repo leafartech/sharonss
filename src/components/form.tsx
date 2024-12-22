@@ -29,7 +29,6 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                 setUserDDI(userData.ddi);
 
                 const selectElement = document.getElementById('ddi-select') as HTMLSelectElement;
-            
 
                 if (selectElement) {
 
@@ -56,7 +55,7 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
         // Inject the external form script
         if (cont === 0) {
             const script = document.createElement('script');
-            script.src = 'https://duasporuma.activehosted.com/f/embed.php?id=27';
+            script.src = 'https://duasporuma.activehosted.com/f/embed.php?id=30';
             script.type = 'text/javascript';
             script.charset = 'utf-8';
             script.async = true;
@@ -70,11 +69,11 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
         if (typeof window !== 'undefined') {
             setTimeout(() => {
                 const inpt0 = document.getElementById('field[80]') as HTMLInputElement; // pagina
-                const inpt1 = document.getElementById('field[103]') as HTMLInputElement; // utmsource
-                const inpt2 = document.getElementById('field[101]') as HTMLInputElement; // utmmedium
-                const inpt3 = document.getElementById('field[100]') as HTMLInputElement; // utmcampaign
-                const inpt4 = document.getElementById('field[99]') as HTMLInputElement; // utmcontent
-                const inpt5 = document.getElementById('field[102]') as HTMLInputElement; // utmterm
+                const inpt1 = document.getElementById('field[108]') as HTMLInputElement; // utmsource
+                const inpt3 = document.getElementById('field[107]') as HTMLInputElement; // utmcampaign
+                const inpt2 = document.getElementById('field[109]') as HTMLInputElement; // utmmedium
+                const inpt4 = document.getElementById('field[111]') as HTMLInputElement; // utmcontent
+                const inpt5 = document.getElementById('field[110]') as HTMLInputElement; // utmterm
 
                 inpt0.value = pag[1] || 'nao-traqueado';
                 inpt1.value = utm_source || 'nao-traqueado';
@@ -158,6 +157,7 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
         if (submitButton) {
             submitButton.addEventListener('click', (event) => {
                 event.preventDefault()
+                console.log('aqui')
 
                 const phoneInput = document.getElementById('phone') as HTMLInputElement;
                 const form = document.querySelector('form[id^="_form_"]') as HTMLFormElement;
@@ -175,6 +175,7 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                 const email = document.querySelector('#email') as HTMLInputElement
 
                 setTimeout(() => {
+                console.log('aqui2')
                     const thankYouURL = `https://duasporuma.com.br/obrigada/?email=${email.value}`;
                     window.location.href = thankYouURL;
                 }, 1000);
@@ -195,7 +196,7 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                     <circle r="20" cy="50" cx="50"></circle>
                 </svg>
             </div>
-            <div id="_forms_27" className={`_form_27 max-w-sm -translate-y-4 z-50`}></div>
+            <div id="_forms_30" className={`_form_30 max-w-sm -translate-y-4 z-50`}></div>
         </div>
     );
 }

@@ -1,5 +1,5 @@
 export default function Calendar() {
     return (
-        <p>18, 20 e 22 de Novembro de 2024</p>
+        <p>13, 15 e 17 de Janeiro de 2025</p>
     )
 }
