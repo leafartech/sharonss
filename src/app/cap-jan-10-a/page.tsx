@@ -14,8 +14,8 @@ export default function Page({ searchParams }: FormProps) {
   return (
     <div className="">
       <Header
-        title={<span>Volte ao Brasil todos os anos com 50% de desconto e nunca mais pense em ir embora da Europa</span>}
-        description={<>Inscreva-se agora no Treinamento online e gratuito e junte-se à Comunidade de Brasileiros na Europa que Aproveitará Férias, Natal ou Ano Novo no Brasil com Passagens 50% mais baratas! <strong>Não Fique de Fora!</strong></>}
+        title={<span>Não deixe a distância atrapalhar sua conexão com o Brasil e sua família!</span>}
+        description={<>Conheça o método simples e prático para garantir passagens mais baratas e viagens mais frequentes.</>}
         searchParams={searchParams}
       />
       <footer className="py-4 bg-[#14112a] text-white text-sm text-center flex flex-col items-center justify-center">
