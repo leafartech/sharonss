@@ -15,7 +15,7 @@ interface FormProps {
     }
 }
 
-export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, utm_source, utm_term, pagina } }: FormProps) {
+export function Form2({ searchParams: { utm_campaign, utm_content, utm_medium, utm_source, utm_term, pagina } }: FormProps) {
     const [userDDI, setUserDDI] = useState<string | null>(null);
     const [selectedDDI, setSelectedDDI] = useState<{ country: string; ddi: string } | null>(null);
 
@@ -66,7 +66,7 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
         // Inject the external form script
         if (cont === 0) {
             const script = document.createElement('script');
-            script.src = 'https://duasporuma.activehosted.com/f/embed.php?id=30';
+            script.src = 'https://duasporuma.activehosted.com/f/embed.php?id=31';
             script.type = 'text/javascript';
             script.charset = 'utf-8';
             script.async = true;
@@ -164,7 +164,7 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
 
     useEffect(() => {
         // Adicionar DDI ao telefone ao enviar o formulário
-        const submitButton = document.getElementById('_form_30_submit') as HTMLButtonElement;
+        const submitButton = document.getElementById('_form_31_submit') as HTMLButtonElement;
         if (submitButton) {
             submitButton.addEventListener('click', (event) => {
                 event.preventDefault()
@@ -205,7 +205,7 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                     <circle r="20" cy="50" cx="50"></circle>
                 </svg>
             </div>
-            <div id="_forms_30" className={`_form_30 max-w-sm -translate-y-4 z-50`}></div>
+            <div id="_forms_31" className={`_form_31 max-w-sm -translate-y-4 z-50`}></div>
         </div>
     );
 }
