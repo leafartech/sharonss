@@ -18,9 +18,9 @@ interface FormProps {
 
 export function Header({ searchParams, description, title, form }: FormProps) {
     return (
-        <header className="header2 relative sm:min-h-screen w-full flex sm:items-center justify-center sm:px-4 pb-4 pt-6 sm:py-12 overflow-hidden">
+        <header className="header2 bg-black relative sm:min-h-screen w-full flex sm:items-center justify-center sm:px-4 pb-4 pt-6 sm:py-12 overflow-hidden">
             <Image
-                src="/images/bg.png"
+                src="/images/bg.webp"
                 layout="fill"
                 alt=""
                 objectFit="cover"
@@ -41,7 +41,7 @@ export function Header({ searchParams, description, title, form }: FormProps) {
                         />
                     </div>
                     <h1 className="font-extrabold text-my2 text-[30px] sm:text-[40px] leading-9 sm:leading-[48px]">{title}</h1>
-                    <p className="text-white text-lg sm:text-2xl font-medium">{description}</p>
+                    <p className="text-white text-lg sm:text-2xl">{description}</p>
                     <ul className="text-white flex flex-col gap-2">
                         <li className="relative flex items-center ps-7 text-lg">
                             <svg className="absolute left-0" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,10 +62,10 @@ export function Header({ searchParams, description, title, form }: FormProps) {
                             <p>Parando de depender de planos de saúde e indicações</p>
                         </li>
                     </ul>
-                    <div className="w-full max-w-md flex flex-col gap-2 text-center">
-                        <Calendar className="sm:block hidden" />
+                    <div className="w-full max-w-md flex flex-col items-center gap-2 text-center">
+                        <Calendar className="sm:flex hidden" />
                         <Button>Quero garantir minha vaga</Button>
-                        <Calendar className="block sm:hidden" />
+                        <Calendar className="flex sm:hidden" />
                     </div>
                 </div>
                 {/* <div className="relative">

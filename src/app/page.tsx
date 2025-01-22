@@ -28,9 +28,11 @@ export default function Page({ searchParams }: FormProps) {
         <Section
           className="py-12 sm:py-12 px-4"
         >
-          <div className="w-full max-w-4xl flex flex-col gap-4">
+          <div className="w-full max-w-4xl flex flex-col items-center gap-4">
             <h2 className="text-xl sm:text-3xl text-white text-center">A Alta Demanda por Nutricionistas <br className="sm:block hidden" />Materno-Infantil Aumenta <strong className="text-[#C4DC73]">TODOS OS DIAS</strong></h2>
-            <Slider />
+            <div className="w-full max-w-full flex justify-center overflow-hidden">
+              <Slider />
+            </div>
           </div>
         </Section>
         <Section
@@ -44,7 +46,7 @@ export default function Page({ searchParams }: FormProps) {
                 className="rounded-3xl"
                 controls
                 preload="metadata"
-                poster="/images/thumb01.png"
+                poster="/images/thumb01.webp"
                 playsInline
                 muted
                 loop
@@ -61,7 +63,7 @@ export default function Page({ searchParams }: FormProps) {
                 className="rounded-3xl"
                 controls
                 preload="metadata"
-                poster="/images/thumb02.png"
+                poster="/images/thumb02.webp"
                 playsInline
                 muted
                 loop
@@ -78,7 +80,7 @@ export default function Page({ searchParams }: FormProps) {
                 className="rounded-3xl"
                 controls
                 preload="metadata"
-                poster="/images/thumb03.png"
+                poster="/images/thumb03.webp"
                 playsInline
                 muted
                 loop
@@ -90,6 +92,9 @@ export default function Page({ searchParams }: FormProps) {
               >
                 Seu navegador não suporta o elemento de vídeo.
               </video>
+            </div>
+            <div className="flex justify-center">
+              <Button>Quero garantir minha vaga</Button>
             </div>
           </div>
         </Section>
@@ -171,24 +176,24 @@ export default function Page({ searchParams }: FormProps) {
               <p className="text-white text-zinc-300">Ao concluir sua inscrição, você irá receber o acesso imediato a todos esses bônus:</p>
             </div>
             <div className="flex flex-col gap-16">
-                <Card
-                  title="Guia completo de suplementação:"
-                  description="Um guia prático com as principais informações sobre os nutrientes essenciais na nutrição materno infantil, indicações de suplementação, dosagens recomendadas e cuidados a serem tomados."
-                  imagePath="bn1.png"
-                  label="Bônus 1"
-                />
-                <Card
-                  title="Modelos de planos de suplementação:"
-                  description="Modelos personalizáveis para que vocês possam criar planos de suplementação individualizados para seus pacientes."
-                  imagePath="bn2.png"
-                  label="Bônus 2"
-                />
-                <Card
-                  title="Compilado de artigos científicos:"
-                  description="Uma seleção de 20 artigos científicos relevantes sobre suplementação materno-infantil, para aprofundar o conhecimento e estudos."
-                  imagePath="bn3.png"
-                  label="Bônus 3"
-                />
+              <Card
+                title="Guia completo de suplementação:"
+                description="Um guia prático com as principais informações sobre os nutrientes essenciais na nutrição materno infantil, indicações de suplementação, dosagens recomendadas e cuidados a serem tomados."
+                imagePath="bn1.webp"
+                label="Bônus 1"
+              />
+              <Card
+                title="Modelos de planos de suplementação:"
+                description="Modelos personalizáveis para que vocês possam criar planos de suplementação individualizados para seus pacientes."
+                imagePath="bn2.webp"
+                label="Bônus 2"
+              />
+              <Card
+                title="Compilado de artigos científicos:"
+                description="Uma seleção de 20 artigos científicos relevantes sobre suplementação materno-infantil, para aprofundar o conhecimento e estudos."
+                imagePath="bn3.webp"
+                label="Bônus 3"
+              />
             </div>
           </div>
         </Section>

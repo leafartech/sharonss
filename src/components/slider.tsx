@@ -33,11 +33,11 @@ export function Slider() {
                     slidesPerView: 1
                 }
             }}
-            className="mySwiper flex items-center"
+            className="mySwiper flex justify-center items-center"
         >
             {carouselData.map((item, index) => (
                 <SwiperSlide className="" key={index}>
-                    {/* <div className=""> */}
+                    <div className="">
                         <Image
                             src={`/images/test/${item.imagePath}`}
                             alt="Integrante Abel"
@@ -46,7 +46,7 @@ export function Slider() {
                             layout="cover"
                             className="rounded-xl h-full"
                         />
-                    {/* </div> */}
+                    </div>
                 </SwiperSlide>
             ))}
         </Swiper>
