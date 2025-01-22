@@ -1,8 +1,6 @@
 import { Button } from "@/components/button";
-import Calendar from "@/components/calendar";
 import Card from "@/components/card";
 import { Header } from "@/components/header";
-import HeroFlex from "@/components/heroflex";
 import Section from "@/components/section";
 import { Slider } from "@/components/slider";
 import Image from "next/image";
