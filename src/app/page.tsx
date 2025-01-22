@@ -20,8 +20,8 @@ export default function Page({ searchParams }: FormProps) {
   return (
     <div className="">
       <Header
-        title={<span>Nutricionista irá Revelar em 2 dias De Forma Inédita:</span>}
-        description={<>Como se tornar <strong>Referência </strong> em Suplementação Materno Infantil na sua cidade e <strong>atender 10 Pacientes Novas em tempo Record.</strong></>}
+        title={<span>Nutricionista irá <span className="text-[#C4DC73]">Revelar</span> em 2 dias De Forma Inédita:</span>}
+        description={<>Como se tornar <strong className="text-[#C4DC73]">Referência </strong> em Suplementação Materno Infantil na sua cidade e <strong className="text-[#C4DC73]">atender 10 Pacientes Novas em tempo Record.</strong></>}
         searchParams={searchParams}
       />
       <main className="bg-black">
@@ -99,9 +99,9 @@ export default function Page({ searchParams }: FormProps) {
           </div>
         </Section>
         <Section
-          className="pb-0 sm:py-12 px-4"
+          className="pb-0 pt-12 sm:py-12 px-4"
         >
-          <div className="flex flex-col gap-4 items-center">
+          <div className="flex flex-col gap-8 items-center">
             <h2 className="text-xl sm:text-3xl text-white text-center max-w-2xl">Uma imersão prática com estudos de caso para você <strong className="text-[#C4DC73]">NÃO COMETER</strong> os erros em atender essa demanda que só cresce…</h2>
             <div className="relative sm:w-[1060px] sm:h-[537px]">
               <Image
@@ -198,7 +198,7 @@ export default function Page({ searchParams }: FormProps) {
           </div>
         </Section>
         <Section
-          className="py-12 sm:py-12 px-4"
+          className="pt-0 pb-12 sm:py-12 px-4"
         >
           <div className="w-[334px] linear-02 flex flex-col items-center gap-4 rounded-2xl">
             <div className="w-full py-6 px-6 border-b-4 border-[#573C08]">

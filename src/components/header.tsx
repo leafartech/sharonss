@@ -18,7 +18,7 @@ interface FormProps {
 
 export function Header({ searchParams, description, title, form }: FormProps) {
     return (
-        <header className="header2 bg-black relative sm:min-h-screen w-full flex sm:items-center justify-center sm:px-4 pb-4 pt-6 sm:py-12 overflow-hidden">
+        <header className="header2 bg-black relative sm:min-h-screen w-full flex items-center sm:items-center justify-center sm:px-4 py-8 sm:py-12 overflow-hidden">
             <Image
                 src="/images/bg.webp"
                 layout="fill"
@@ -27,12 +27,12 @@ export function Header({ searchParams, description, title, form }: FormProps) {
             />
             <div className="sm:hidden absolute top-0 w-full h-full bg-black/60"></div>
             <div className="w-full sm:max-w-6xl sm:grid sm:grid-cols-2 gap-12 sm:gap-12 flex flex-col z-50  ">
-                <div id="forms" className="flex flex-col gap-6 justify-start items-start sm:items-start sm:justify-start sm:text-left px-4 sm:px-0">
-                    <div className="w-full rounded-2xl border border-[#B9E89B] px-4 text-base sm:px-12 py-3 flex items-center gap-2 text-[#B9E89B]">
+                <div id="forms" className="flex flex-col gap-3 sm:gap-6 justify-start items-start sm:items-start sm:justify-start sm:text-left px-4 sm:px-0">
+                    <div className="w-full sm:flex hidden rounded-2xl border border-[#B9E89B] px-4 text-base sm:px-12 py-3 items-center gap-2 text-[#B9E89B]">
                         <span className="hidden sm:block h-[10px] w-[10px] bg-[#B9E89B] rounded-full"></span>
                         <p>Workshop Intensino Suplementação Materno infantil</p>
                     </div>
-                    <div className="relative sm:w-[264px] w-[220px] h-[64px]">
+                    <div className="relative sm:w-[264px] w-[200px] h-[64px]">
                         <Image
                             src="/images/logo.png"
                             alt=""
@@ -43,29 +43,29 @@ export function Header({ searchParams, description, title, form }: FormProps) {
                     <h1 className="font-extrabold text-my2 text-[30px] sm:text-[40px] leading-9 sm:leading-[48px]">{title}</h1>
                     <p className="text-white text-lg sm:text-2xl">{description}</p>
                     <ul className="text-white flex flex-col gap-2">
-                        <li className="relative flex items-center ps-7 text-lg">
+                        <li className="relative flex items-center ps-7 sm:text-lg">
                             <svg className="absolute left-0" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6.47485 15.5488C6.34308 15.6805 6.12944 15.6805 5.99767 15.5488L0.238592 9.78968C0.106821 9.65791 0.106821 9.44427 0.238593 9.3125L2.60302 6.94807C2.73493 6.81616 2.94884 6.81632 3.08056 6.94842L5.99755 9.87404C6.12931 10.0062 6.34331 10.0063 6.4752 9.87427L15.9194 0.420475C16.0512 0.28859 16.2649 0.288536 16.3967 0.420354L18.7614 2.78501C18.8932 2.91679 18.8932 3.13043 18.7614 3.2622L6.47485 15.5488Z" fill="#B9E89B" />
                             </svg>
                             <p>Ganhando mais, trabalhando menos e liberando <strong>mais tempo para sua família</strong>.</p>
                         </li>
-                        <li className="relative flex items-center ps-7 text-lg">
+                        <li className="relative flex items-center ps-7 sm:text-lg">
                             <svg className="absolute left-0" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6.47485 15.5488C6.34308 15.6805 6.12944 15.6805 5.99767 15.5488L0.238592 9.78968C0.106821 9.65791 0.106821 9.44427 0.238593 9.3125L2.60302 6.94807C2.73493 6.81616 2.94884 6.81632 3.08056 6.94842L5.99755 9.87404C6.12931 10.0062 6.34331 10.0063 6.4752 9.87427L15.9194 0.420475C16.0512 0.28859 16.2649 0.288536 16.3967 0.420354L18.7614 2.78501C18.8932 2.91679 18.8932 3.13043 18.7614 3.2622L6.47485 15.5488Z" fill="#B9E89B" />
                             </svg>
-                            <p>Sendo visto como autoridade e referência n1 na sua cidade.</p>
+                            <p>Sendo visto como autoridade e referência nº1 na sua cidade.</p>
                         </li>
-                        <li className="relative flex items-center ps-7 text-lg">
+                        <li className="relative flex items-center ps-7 sm:text-lg">
                             <svg className="absolute left-0" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6.47485 15.5488C6.34308 15.6805 6.12944 15.6805 5.99767 15.5488L0.238592 9.78968C0.106821 9.65791 0.106821 9.44427 0.238593 9.3125L2.60302 6.94807C2.73493 6.81616 2.94884 6.81632 3.08056 6.94842L5.99755 9.87404C6.12931 10.0062 6.34331 10.0063 6.4752 9.87427L15.9194 0.420475C16.0512 0.28859 16.2649 0.288536 16.3967 0.420354L18.7614 2.78501C18.8932 2.91679 18.8932 3.13043 18.7614 3.2622L6.47485 15.5488Z" fill="#B9E89B" />
                             </svg>
                             <p>Parando de depender de planos de saúde e indicações</p>
                         </li>
                     </ul>
-                    <div className="w-full max-w-md flex flex-col items-center gap-2 text-center">
+                    <div className="w-full max-w-md flex flex-col items-center gap-2 text-center sm:mt-0 mt-4">
                         <Calendar className="sm:flex hidden" />
                         <Button>Quero garantir minha vaga</Button>
-                        <Calendar className="flex sm:hidden" />
+                        <Calendar className="flex sm:hidden mt-1" />
                     </div>
                 </div>
                 {/* <div className="relative">
