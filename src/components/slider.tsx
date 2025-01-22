@@ -18,13 +18,13 @@ export function Slider() {
             grabCursor={true}
             loop={true}
             autoplay={{
-                delay: 500,
+                delay: 5000,
                 disableOnInteraction: false,
             }}
             modules={[Navigation, Autoplay]}
             breakpoints={{
                 1000: {
-                    slidesPerView: 6
+                    slidesPerView: 3
                 },
                 500: {
                     slidesPerView: 1
@@ -37,16 +37,16 @@ export function Slider() {
         >
             {carouselData.map((item, index) => (
                 <SwiperSlide className="" key={index}>
-                    <div className="w-[256px]">
+                    {/* <div className=""> */}
                         <Image
-                            src={`/images/marcas/${item.imagePath}`}
+                            src={`/images/test/${item.imagePath}`}
                             alt="Integrante Abel"
                             width={item.width}
                             height={item.height}
                             layout="cover"
                             className="rounded-xl h-full"
                         />
-                    </div>
+                    {/* </div> */}
                 </SwiperSlide>
             ))}
         </Swiper>

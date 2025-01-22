@@ -1,14 +1,32 @@
+"use client"
+
+import { ReactNode, useEffect, useState } from "react"
+
 interface ButtonProps {
-    type: 'redirect' | 'submit'
+    children: ReactNode
 }
 
-export function Button({ type }: ButtonProps) {
-    if (type === 'redirect') {
-        return (
-            <a href="#forms" className="text-center max-w-md w-full bg-[#5484ff] box py-4 sm:px-24 rounded-full font-extrabold text-lg text-white uppercase">Quero participar</a>
-        )
-    }
+export function Button({ children }: ButtonProps) {
+
+    const [params, setParams] = useState<string>('')
+
+    useEffect(() => {
+
+        if (typeof window !== 'undefined') {
+
+            const params = new URLSearchParams(window.location.search)
+
+            const utm_source = params.get('utm_source')
+            const utm_campaign = params.get('utm_campaign')
+            const utm_medium = params.get('utm_medium')
+            const utm_content = params.get('utm_content')
+            const utm_term = params.get('utm_term')
+
+            setParams(`utm_source=${utm_source}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_content=${utm_content}&utm_term=${utm_term}`)
+        }
+    }, [])
+
     return (
-        <button type="submit" className="max-w-md w-full bg-[#5484ff] box py-4 sm:px-24 rounded-full font-extrabold text-lg text-white uppercase">Quero participar</button>
+        <a href={`https://pay.kiwify.com.br/2U3Pn9L?${params}`} type="submit" className="max-w-md w-full bg-[#FF7F27] border border-[#FFE8D8] text-white font-semibold py-4 px-6 rounded-xl my-shadow">{children}</a>
     )
 }

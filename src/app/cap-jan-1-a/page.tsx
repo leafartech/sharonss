@@ -1,11 +1,4 @@
-import { Button } from "@/components/button";
-import Calendar from "@/components/calendar";
-import { Card } from "@/components/card";
 import { Header } from "@/components/header";
-import HeroFlex from "@/components/heroflex";
-import Section from "@/components/section";
-import { Slider } from "@/components/slider";
-import Image from "next/image";
 
 
 interface FormProps {
@@ -22,11 +15,11 @@ export default function Page({ searchParams }: FormProps) {
   return (
     <div className="">
       <Header
-        title={<span>Volte ao Brasil todos os anos com 50% de desconto e nunca mais pense em ir embora da Europa</span>}
-        description={<>Inscreva-se agora no Treinamento online e gratuito e junte-se à Comunidade de Brasileiros na Europa que Aproveitará Férias, Natal ou Ano Novo no Brasil com Passagens 50% mais baratas! <strong>Não Fique de Fora!</strong></>}
+        title={<span>Nutricionista irá Revelar em 2 dias De Forma Inédita:</span>}
+        description={<>Como se tornar <strong>Referência </strong> em Suplementação Materno Infantil na sua cidade e <strong>atender 10 Pacientes Novas em tempo Record.</strong></>}
         searchParams={searchParams}
       />
-      <main className="">
+      {/* <main className="">
         <section
           className="w-full py-12 sm:py-16 bg-my2"
         >
@@ -85,8 +78,6 @@ export default function Page({ searchParams }: FormProps) {
                 className="sm:hidden block"
               />
             </div>
-            {/* <div className="flex items-center justify-center">
-            </div> */}
             <div className="col-mod flex flex-col justify-center gap-4 px-8 sm:pt-0 pt-20 text-[#1C1E3A]">
               <h2 className="font-bold text-2xl sm:text-4xl">Você vai aprender</h2>
               <ul className="flex flex-col gap-2 sm:text-lg font-medium">
@@ -331,7 +322,7 @@ export default function Page({ searchParams }: FormProps) {
             </div>
           </div>
         </Section>
-      </main>
+      </main> */}
       <footer className="py-4 bg-[#14112a] text-white text-sm text-center flex flex-col items-center justify-center">
         <p>Copyright © 2024 | Treinamento - Duas Por Uma</p>
         <p>Sede de Viajar Comércio de Infoprodutos e Cursos Digitais LTDA - 47.418.377/0001-29</p>

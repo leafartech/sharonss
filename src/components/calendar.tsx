@@ -1,5 +1,5 @@
-export default function Calendar() {
+export default function Calendar({className}: {className: string}) {
     return (
-        <p>13, 15 e 17 de Janeiro de 2025</p>
+        <p className={`text-white text-base ${className}`}>🗓️ Dia 6 e 8 de fevereiro <br className={className}/><span className="hidden sm:block">|</span> Evento 100% online e ao vivo!</p>
     )
 }

@@ -6,6 +6,47 @@
   scroll-behavior: smooth
 }
 
+.my-shadow {
+  box-shadow: 0px 0px 11.6px 0px #FFDB94;
+}
+
+.header {
+  background-image: url('/images/bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.bg-02 {
+  background-image: url('/images/bg2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 500px) {
+  .bg-02 {
+    background-image: url('/images/bg2.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+}
+
+.linear-01 {
+  background: linear-gradient(to right, #C4DC73 0%, #58B750 100%);
+}
+
+.linear-02 {
+    background: linear-gradient(
+      to right,
+      #FFDB94 0%,
+      #E8B44D 22%,
+      #FFDB94 48%,
+      #E8B44D 80%,
+      #82652B 100%
+    );
+}
+
 .box {
     box-shadow: 0px 3.435px 2.748px 0px rgba(83, 133, 255, 0.1), 0px 8.687px 6.95px 0px rgba(83, 133, 255, 0.14), 0px 17.721px 14.177px 0px rgba(83, 133, 255, 0.17), 0px 36.502px 29.201px 0px rgba(83, 133, 255, 0.21), 0px 100px 80px 0px rgba(83, 133, 255, 0.31);
 }
