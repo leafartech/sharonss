@@ -71,7 +71,7 @@ export default function Page({ searchParams }: FormProps) {
           className="py-4 sm:py-12 px-4"
         >
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl sm:text-3xl text-white text-center">Quem participou das auals <br className="sm:block hidden" />Recomenda <strong className="text-[#C4DC73]">TODOS OS DIAS</strong></h2>
+            <h2 className="text-2xl sm:text-3xl text-white text-center">Quem participou das aulas <br className="sm:block hidden" />Recomenda <strong className="text-[#C4DC73]">TODOS OS DIAS</strong></h2>
             <div className="flex gap-8 justify-center flex-wrap">
               <video
                 src="/images/vid01.mp4"
@@ -131,11 +131,21 @@ export default function Page({ searchParams }: FormProps) {
           </div>
         </Section>
         <Section
-          className="pb-0 pt-12 sm:py-12 px-4"
+          className="pb-8 pt-12 sm:py-12 px-4"
         >
-          <div className="flex flex-col gap-8 items-center">
+          <div className="flex flex-col gap-4 sm:gap-8 items-center">
             <h2 className="text-2xl sm:text-3xl text-white text-center max-w-2xl">Uma imersão prática com estudos de caso para você <strong className="text-[#C4DC73]">NÃO COMETER</strong> os erros em atender essa demanda que só cresce…</h2>
-            <div className="relative sm:w-[1060px] sm:h-[537px]">
+            <div className="relative w-full h-[500px] sm:hidden">
+              <Image
+                src="/images/noticia.png"
+                alt="Notícia"
+                layout="fill"
+                // width={1060}
+                // height={537}
+                objectFit="contain"
+              />
+            </div>
+            <div className="relative hidden sm:block sm:w-[1060px] sm:h-[537px]">
               <Image
                 src="/images/noticia.png"
                 alt="Notícia"
@@ -303,7 +313,7 @@ export default function Page({ searchParams }: FormProps) {
                 </div>
               </div>
             </div>
-            <div className="relative sm:hidden block w-full h-[462px]">
+            <div className="relative sm:hidden block w-full h-[462px] mt-4">
                 <Image
                   src="/images/fabiana.png"
                   alt="Foto da Fabiana"
