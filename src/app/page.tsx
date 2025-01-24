@@ -147,7 +147,7 @@ export default function Page({ searchParams }: FormProps) {
             </div>
             <div className="relative hidden sm:block sm:w-[1060px] sm:h-[537px]">
               <Image
-                src="/images/noticia.png"
+                src="/images/noticia2.png"
                 alt="Notícia"
                 layout="fill"
                 // width={1060}
