@@ -28,9 +28,9 @@ export function Header({ searchParams, description, title, form }: FormProps) {
             <div className="sm:hidden absolute top-0 w-full h-full bg-black/60"></div>
             <div className="w-full sm:max-w-6xl sm:grid sm:grid-cols-2 gap-12 sm:gap-12 flex flex-col z-50  ">
                 <div id="forms" className="flex flex-col gap-3 sm:gap-6 justify-start items-start sm:items-start sm:justify-start sm:text-left px-4 sm:px-0">
-                    <div className="w-full sm:flex hidden rounded-2xl border border-[#B9E89B] px-4 text-base sm:px-12 py-3 items-center gap-2 text-[#B9E89B]">
+                    <div className="w-full sm:flex hidden rounded-2xl border border-[#B9E89B] px-4 text-base sm:px-12 py-3 items-center gap-2 text-[#B9E89B] text-sm">
                         <span className="hidden sm:block h-[10px] w-[10px] bg-[#B9E89B] rounded-full"></span>
-                        <p>Workshop Intensino Suplementação Materno infantil</p>
+                        <p>Workshop Intensivo sobre Suplementação Materno Infantil</p>
                     </div>
                     <div className="relative sm:w-[264px] w-[200px] h-[64px]">
                         <Image
@@ -64,7 +64,7 @@ export function Header({ searchParams, description, title, form }: FormProps) {
                     </ul>
                     <div className="w-full max-w-md flex flex-col items-center gap-2 text-center sm:mt-0 mt-4">
                         <Calendar className="sm:flex hidden" />
-                        <Button>Quero garantir minha vaga</Button>
+                        <Button isNotLink={true}>Quero garantir minha vaga</Button>
                         <Calendar className="flex sm:hidden mt-1" />
                     </div>
                 </div>

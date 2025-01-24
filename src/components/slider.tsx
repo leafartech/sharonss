@@ -1,7 +1,7 @@
 'use client'
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules"
+import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import React from "react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -21,7 +21,11 @@ export function Slider() {
                 delay: 5000,
                 disableOnInteraction: false,
             }}
-            modules={[Navigation, Autoplay]}
+            pagination={{
+                clickable: true, // Adiciona botões de paginação clicáveis
+                dynamicBullets: true, // Mostra bullets dinâmicos (opcional)
+            }}
+            modules={[Navigation, Autoplay, Pagination]}
             breakpoints={{
                 1000: {
                     slidesPerView: 3
@@ -37,7 +41,7 @@ export function Slider() {
         >
             {carouselData.map((item, index) => (
                 <SwiperSlide className="" key={index}>
-                    <div className="">
+                    <div className="flex justify-center pb-5">
                         <Image
                             src={`/images/test/${item.imagePath}`}
                             alt="Integrante Abel"

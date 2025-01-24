@@ -4,9 +4,10 @@ import { ReactNode, useEffect, useState } from "react"
 
 interface ButtonProps {
     children: ReactNode
+    isNotLink: boolean
 }
 
-export function Button({ children }: ButtonProps) {
+export function Button({ children, isNotLink }: ButtonProps) {
 
     const [params, setParams] = useState<string>('')
 
@@ -27,6 +28,11 @@ export function Button({ children }: ButtonProps) {
 
         }
     }, [])
+
+    if (isNotLink)
+        return (
+            <a href={'#preco'} type="submit" className="max-w-md w-full text-center bg-[#FF7F27] border border-[#FFE8D8] uppercase text-white font-semibold py-4 px-6 rounded-xl my-shadow">{children}</a>
+        )
 
     return (
         <a href={`https://pay.kiwify.com.br/2U3Pn9L?${params}`} type="submit" className="max-w-md w-full text-center bg-[#FF7F27] border border-[#FFE8D8] uppercase text-white font-semibold py-4 px-6 rounded-xl my-shadow">{children}</a>

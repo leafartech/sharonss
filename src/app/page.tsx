@@ -21,7 +21,8 @@ export default function Page({ searchParams }: FormProps) {
     <div className="">
       <Header
         title={<span>Nutricionista irá <span className="text-[#C4DC73]">Revelar</span> em 2 dias De Forma Inédita:</span>}
-        description={<>Como se tornar <strong className="text-[#C4DC73]">Referência </strong> em Suplementação Materno Infantil na sua cidade e <strong className="text-[#C4DC73]">atender 10 Pacientes Novas em tempo Record.</strong></>}
+        description={<>Como se tornar <strong className="text-[#C4DC73]">Referência </strong> em Suplementação Materno Infantil na sua cidade e <strong className="text-[#C4DC73]">atender com segurança e excelência</strong> para TRIPLICAR o valor da sua consulta</>}
+        // description={<>Como se tornar <strong className="text-[#C4DC73]">Referência </strong> em Suplementação Materno Infantil na sua cidade e <strong className="text-[#C4DC73]">atender 10 Pacientes Novas em tempo Record.</strong></>}
         searchParams={searchParams}
       />
       <main className="bg-black">
@@ -36,10 +37,41 @@ export default function Page({ searchParams }: FormProps) {
           </div>
         </Section>
         <Section
+          className="pt-4 pb-12 sm:py-12 px-4"
+        >
+          <div className="w-full flex flex-col items-center gap-4">
+            <h2 className="text-2xl sm:text-3xl text-white text-center">Para quem é o <strong className="text-[#C4DC73]">Workshop?</strong></h2>
+            <div className="flex gap-6 flex-wrap">
+              <div className="linear-01 w-full max-w-md  border border-white rounded-xl flex flex-col gap-3 p-12">
+                <div className="relative w-16 h-16">
+                  <Image
+                    src="/images/icon02.png"
+                    alt=""
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
+                <p className="text-xl">Nutricionistas que querem se especializar em suplementação materno infantil</p>
+              </div>
+              <div className="linear-01 w-full max-w-md  border border-white rounded-xl flex flex-col gap-3 p-12">
+                <div className="relative w-16 h-16">
+                  <Image
+                    src="/images/icon01.png"
+                    alt=""
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
+                <p className="text-xl">Nutricionistas que precisam de atualização em suplementação materno infantil</p>
+              </div>
+            </div>
+          </div>
+        </Section>
+        <Section
           className="py-4 sm:py-12 px-4"
         >
           <div className="flex flex-col gap-6">
-            <h2 className="text-xl sm:text-3xl text-white text-center">Quem participou das auals <br className="sm:block hidden" />Recomenda <strong className="text-[#C4DC73]">TODOS OS DIAS</strong></h2>
+            <h2 className="text-2xl sm:text-3xl text-white text-center">Quem participou das auals <br className="sm:block hidden" />Recomenda <strong className="text-[#C4DC73]">TODOS OS DIAS</strong></h2>
             <div className="flex gap-8 justify-center flex-wrap">
               <video
                 src="/images/vid01.mp4"
@@ -94,7 +126,7 @@ export default function Page({ searchParams }: FormProps) {
               </video>
             </div>
             <div className="flex justify-center">
-              <Button>Quero garantir minha vaga</Button>
+              <Button isNotLink={true}>Quero garantir minha vaga</Button>
             </div>
           </div>
         </Section>
@@ -102,7 +134,7 @@ export default function Page({ searchParams }: FormProps) {
           className="pb-0 pt-12 sm:py-12 px-4"
         >
           <div className="flex flex-col gap-8 items-center">
-            <h2 className="text-xl sm:text-3xl text-white text-center max-w-2xl">Uma imersão prática com estudos de caso para você <strong className="text-[#C4DC73]">NÃO COMETER</strong> os erros em atender essa demanda que só cresce…</h2>
+            <h2 className="text-2xl sm:text-3xl text-white text-center max-w-2xl">Uma imersão prática com estudos de caso para você <strong className="text-[#C4DC73]">NÃO COMETER</strong> os erros em atender essa demanda que só cresce…</h2>
             <div className="relative sm:w-[1060px] sm:h-[537px]">
               <Image
                 src="/images/noticia.png"
@@ -198,6 +230,7 @@ export default function Page({ searchParams }: FormProps) {
           </div>
         </Section>
         <Section
+          id="preco"
           className="pt-0 pb-12 sm:py-12 px-4"
         >
           <div className="w-[334px] linear-02 flex flex-col items-center gap-4 rounded-2xl">
@@ -246,7 +279,7 @@ export default function Page({ searchParams }: FormProps) {
               </div>
             </div>
             <div className="pb-8 -mt-6">
-              <Button>Quero garantir minha vaga</Button>
+              <Button isNotLink={false}>Quero garantir minha vaga</Button>
             </div>
           </div>
         </Section>
@@ -259,7 +292,7 @@ export default function Page({ searchParams }: FormProps) {
               <div className="flex flex-col gap-4 max-w-lg">
                 <h4 className="text-3xl">Quem é A Nutricionista <br /><strong>Fabiana Montanholi</strong>?</h4>
                 <div className="flex flex-col gap-4 text-zinc-300">
-                  <p>Fabiana Montanholi é nutricionista com mais de 10 anos de experiência e uma das maiores referências em Suplementação Materno-Infantil no Brasil. </p>
+                  <p>Fabiana Montanholi é nutricionista com quase uma década de experiência e uma das maiores referências em Suplementação Materno-Infantil no Brasil. </p>
                   <p>Atualmente, Fabiana dedica-se a capacitar outros nutricionistas a se tornarem autoridades em suplementação materno-infantil, através de cursos, workshops e mentorias, ajudando-os a crescerem profissionalmente e conquistarem mais tempo e liberdade financeira. </p>
                   <h6 className="font-semibold text-white text-lg">Reconhecida por:</h6>
                   <ul className="">
@@ -269,6 +302,14 @@ export default function Page({ searchParams }: FormProps) {
                   </ul>
                 </div>
               </div>
+            </div>
+            <div className="relative sm:hidden block w-full h-[462px]">
+                <Image
+                  src="/images/fabiana.png"
+                  alt="Foto da Fabiana"
+                  layout="fill"
+                  objectFit="contain"
+                />
             </div>
           </Section>
         </div>
