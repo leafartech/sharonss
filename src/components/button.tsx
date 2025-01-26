@@ -1,13 +1,14 @@
 "use client"
 
-import { ReactNode, useEffect, useState } from "react"
+import { ReactNode, SetStateAction, useEffect, useState } from "react"
 
 interface ButtonProps {
     children: ReactNode
-    isNotLink: boolean
+    isOpen: boolean
+    setIsOpen: React.Dispatch<SetStateAction<boolean>>
 }
 
-export function Button({ children, isNotLink }: ButtonProps) {
+export function Button({ children, isOpen, setIsOpen }: ButtonProps) {
 
     const [params, setParams] = useState<string>('')
 
@@ -29,12 +30,7 @@ export function Button({ children, isNotLink }: ButtonProps) {
         }
     }, [])
 
-    if (isNotLink)
-        return (
-            <a href={'#preco'} type="submit" className="max-w-md w-full text-center bg-[#FF7F27] border border-[#FFE8D8] uppercase text-white font-semibold py-4 px-6 rounded-xl my-shadow">{children}</a>
-        )
-
     return (
-        <a href={`https://pay.kiwify.com.br/2U3Pn9L?${params}`} type="submit" className="max-w-md w-full text-center bg-[#FF7F27] border border-[#FFE8D8] uppercase text-white font-semibold py-4 px-6 rounded-xl my-shadow">{children}</a>
+        <button onClick={() => setIsOpen(!isOpen)} className="max-w-md w-full text-center btn-bg border-b border-black text-xl py-6 px-12 sm:px-6 rounded-xl my-shadow">{children}</button>
     )
 }

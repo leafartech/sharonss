@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Sora } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const sora = Sora({ subsets: ["latin"], weight: ['300', '400', '500', '600'] });
 
 export const metadata: Metadata = {
   title: "Inscrição - Treinamento Duas por Uma",
@@ -26,7 +26,7 @@ export default function RootLayout({
           })(window,document,'script','dataLayer','GTM-PQZNT4GP')
         `}} />
       </head>
-      <body className={inter.className}>
+      <body className={sora.className}>
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQZNT4GP"
           height="0" width="0"></iframe></noscript>
         {children}

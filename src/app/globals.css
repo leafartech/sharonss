@@ -7,7 +7,13 @@
 }
 
 .my-shadow {
-  box-shadow: 0px 0px 11.6px 0px #FFDB94;
+  box-shadow: 0px 0px 52px 6px rgba(135.68327105978264, 232.02343749999997, 201.62916216383363, 0.5)
+}
+
+.btn-bg {
+  background: transparent;
+  background-image: radial-gradient(at top center, #45EEA1 0%, #1BAF6C 100%);
+  border-width: 0px 0px 2px 0px;
 }
 
 .header {
@@ -15,6 +21,13 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.img-bg {
+  background-image: url('/images/bg-2.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .bg-02 {
   background-image: url('/images/bg2.webp');
@@ -29,6 +42,9 @@
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
+  }
+  .img-bg {
+    background-image: none
   }
 }
 
