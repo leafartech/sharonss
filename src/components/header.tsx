@@ -24,9 +24,10 @@ export function Header({ description, title, isOpen, setIsOpen }: FormProps) {
                 layout="fill"
                 alt=""
                 objectFit="cover"
+                objectPosition="top"
                 className="sm:hidden block"
             />
-            <div className="w-full sm:max-w-6xl sm:grid sm:grid-cols-2 gap-12 sm:gap-12 flex flex-col z-50  ">
+            <div className="w-full sm:max-w-6xl sm:grid sm:grid-cols-2 gap-12 sm:gap-12 flex flex-col z-50 pt-24 ">
                 <div id="forms" className="flex flex-col gap-3 sm:gap-4 justify-center items-center sm:items-start sm:justify-start sm:text-left px-4 sm:px-0">
                     <div className="relative sm:w-[342px] w-[264px] h-[64px]">
                         <Image
