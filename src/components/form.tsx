@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { ChangeEvent, FormEvent, SetStateAction, useState } from "react"
 
 type FormTypes = {
@@ -25,6 +26,8 @@ const initialData = {
 export default function Form({ isOpen, setIsOpen }: FormTypes) {
 
     const [data, setData] = useState<DataTypes>(initialData)
+    const [isLoading, setIsLoading] = useState<boolean>(false)
+    const { push } = useRouter()
 
     function formatPhone(phone: string): string {
         phone = phone.replace(/\D/g, '');
@@ -51,6 +54,7 @@ export default function Form({ isOpen, setIsOpen }: FormTypes) {
 
     async function formSubmited(e: FormEvent) {
         e.preventDefault()
+        setIsLoading(true)
 
         const params = new URLSearchParams(window.location.search)
 
@@ -78,26 +82,27 @@ export default function Form({ isOpen, setIsOpen }: FormTypes) {
 
             const response = await res.json()
 
-            console.log(response)
+            setIsLoading(false)
+            push('/obrigado')
         }).catch(e => console.log(e))
     }
 
     return (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50">
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-[999999999]">
             <div onClick={() => setIsOpen(!isOpen)} className="absolute top-0 left-0 h-full w-full bg-black/60"></div>
             <form onSubmit={(e) => formSubmited(e)} className="w-full max-w-2xl relative flex items-center justify-center bg-white rounded-2xl p-12">
                 <button onClick={() => setIsOpen(!isOpen)} className="absolute top-4 right-4">
                     <svg className="w-6 h-6 fill-zinc-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e8eaed"><path d="M480-424 284-228q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536-480l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-424Z" /></svg>
                 </button>
                 <div className="w-full max-w-lg flex flex-col items-center gap-4">
-                    <div className="relative sm:w-[264px] w-[200px] h-[38px]">
+                    {/* <div className="relative sm:w-[264px] w-[200px] h-[38px]">
                         <Image
                             src="/images/logo-black.webp"
                             alt=""
                             layout="fill"
                             objectFit="contain"
                         />
-                    </div>
+                    </div> */}
                     <h2 className="text-my text-2xl sm:text-3xl font-bold text-center">Preencha para Aplicar</h2>
                     <div className="w-full flex flex-col items-center gap-4">
                         <input

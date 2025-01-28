@@ -23,11 +23,11 @@ export default function RootLayout({
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-PQZNT4GP')
+          })(window,document,'script','dataLayer','GTM-MW7FFSWX')
         `}} />
       </head>
       <body className={sora.className}>
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQZNT4GP"
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MW7FFSWX"
           height="0" width="0"></iframe></noscript>
         {children}
       </body>

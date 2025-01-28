@@ -28,9 +28,9 @@ type Card2Types = {
 export function Card2({ Icon, description, title }: Card2Types) {
     return (
         <div className="w-full max-w-sm bg-white rounded-2xl p-6 shadow-2xl border-b-2 border-my">
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col items-center gap-6">
                 {Icon}
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col items-center text-center gap-2">
                     <h4 className="text-my text-2xl font-semibold">{title}</h4>
                     <p className="">{description}</p>
                 </div>
