@@ -160,10 +160,19 @@ export default function Form({ isOpen, setIsOpen }: FormTypes) {
                             <option>Já sei que preciso de um time comercial de alta performance, mas não sei por onde começar </option>
                         </select>
                     </div>
-                    <button className="w-full sm:max-w-sm text-center btn-bg py-3 px-12 sm:px-6 rounded-xl my-shadow" type="submit">Aplicar</button>
+                    <button className="w-full sm:max-w-sm text-center btn-bg py-3 px-12 sm:px-6 rounded-xl my-shadow" type="submit">
+                        {isLoading ? (
+                            <div className="flex-col gap-4 w-full flex items-center justify-center">
+                                <div className="w-5 h-5 border-2 text-white text-4xl animate-spin border-zinc-100 flex items-center justify-center border-t-blue-400 rounded-full">
+                                </div>
+                            </div>
+                        ) : (
+                            <span>Aplicar</span>
+                        )}
+                    </button>
                     <p className="text-center max-w-xs text-xs text-zinc-400">Concordo em receber comunicados <br />via Whatsapp e E-mail.</p>
                 </div>
-            </form>
-        </div>
+            </form >
+        </div >
     )
 }
