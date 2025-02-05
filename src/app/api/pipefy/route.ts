@@ -7,6 +7,15 @@ export async function POST(request: Request) {
     const pipefy_token = 'eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJQaXBlZnkiLCJpYXQiOjE3Mzc4MzcyNzksImp0aSI6IjAyZDFjOWM4LWM2ZWQtNDlhYS04NGM0LTcwOGQ2Y2RhMTVmMiIsInN1YiI6MzAyNTczOTM0LCJ1c2VyIjp7ImlkIjozMDI1NzM5MzQsImVtYWlsIjoib25saW5lcGVyc2V2ZXJlQGdtYWlsLmNvbSJ9fQ.9HYXSbv8nOAUmFnz46YVKi86rd6IkFMSmfeZtECj7VPywqe8S2tHSCxWTqEkG24N3-NCcWu8rjt1-YC-R5gGpA'
     const pipe_id = '303356561'
 
+    await fetch(`https://hook.us1.make.com/zbxslc34hzygvye68c98xkgtqoejmb2u`, {
+        method: 'POST',
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    })
+
     await fetch(`https://api.pipefy.com/graphql`, {
         method: 'POST',
         headers: {
