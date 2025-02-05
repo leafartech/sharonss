@@ -112,6 +112,7 @@ export default function Page() {
         <Form
           isOpen={isOpen}
           setIsOpen={setIsOpen}
+          isca={true}
         />
       )}
     </div>

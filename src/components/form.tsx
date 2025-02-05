@@ -5,6 +5,7 @@ import { ChangeEvent, FormEvent, SetStateAction, useState } from "react"
 type FormTypes = {
     isOpen: boolean
     setIsOpen: React.Dispatch<SetStateAction<boolean>>
+    isca?: boolean
 }
 
 type DataTypes = {
@@ -23,7 +24,7 @@ const initialData = {
     current_moment: '',
 }
 
-export default function Form({ isOpen, setIsOpen }: FormTypes) {
+export default function Form({ isOpen, setIsOpen, isca }: FormTypes) {
 
     const [data, setData] = useState<DataTypes>(initialData)
     const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -77,6 +78,7 @@ export default function Form({ isOpen, setIsOpen }: FormTypes) {
                 utm_medium,
                 utm_content,
                 utm_term,
+                isca
             })
         }).then(async res => {
 
