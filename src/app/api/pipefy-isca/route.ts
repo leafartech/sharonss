@@ -46,6 +46,7 @@ export async function POST(request: Request) {
                             { field_id: "copy_of_utm_term", field_value: "${data.utm_content}" }
                             { field_id: "copy_of_copy_of_copy_of_utm_source", field_value: "${data.utm_term}" }                          
                         ],
+                        labels: [314577280]
                     }) {
                         card {
                             id
