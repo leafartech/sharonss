@@ -33,7 +33,7 @@ export async function POST(request: Request) {
                         pipe_id: ${pipe_id},
                         title: "${data.name}",
                         fields_attributes: [
-                            { field_id: "nome", field_value: "${data.name}" },  
+                            { field_id: "nome", field_value: "${data.name + ' - live'}" },  
                             { field_id: "email", field_value: "${data.email}" },
                             { field_id: "contato_telefonico", field_value: "${data.phone}" }
                             { field_id: "telefone", field_value: "${data.phone}" }
@@ -46,7 +46,6 @@ export async function POST(request: Request) {
                             { field_id: "copy_of_utm_term", field_value: "${data.utm_content}" }
                             { field_id: "copy_of_copy_of_copy_of_utm_source", field_value: "${data.utm_term}" }                          
                         ],
-                        labels: [314577280]
                     }) {
                         card {
                             id
