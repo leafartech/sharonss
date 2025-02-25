@@ -20,8 +20,9 @@ export default function Page() {
       <HeaderLive
         isOpen={isOpen}
         setIsOpen={setIsOpen}
-        title={<>Maximize o <strong className="text-my2">potencial de sua empresa</strong> sem ficar refém das operações diárias!</>}
-        description={<>Você quer escalar sua empresa e aumentar seus lucros, mas <strong>se sente preso na gestão operacional</strong>? Descubra como liberar seu tempo e focar na saúde e no crescimento do seu negócio! Nesta <strong>sexta-feira, às 13h</strong>, eu vou compartilhar estratégias vitais em uma live exclusiva.</>}
+        // title={<>Exclusivo para <strong className="text-my2">escritórios de advocacia</strong> que faturam acima de 50mil/mês</>}
+        title={<>Sexta-feira às 13h irei te mostrar <strong className="text-my2">como estruturar uma operação comercial</strong> que vende de forma recorrente e previsível</>}
+        description={<>Nessa live irei abrir o processo de como contratar e treinar um time comercial do completo zero para que ele venda de forma recorrente e previsível trabalhando a sua lista de leads e interações no seu instagram</>}
       />
       <main className="bg-[#141940]">
         <Section classNameS="relative py-12 sm:-mt-24 -mt-48 px-4">
@@ -31,18 +32,18 @@ export default function Page() {
               <h2 className="text-center text-[#141940] text-2xl sm:text-4xl font-bold">O que você irá aprender:</h2>
               <div className="flex flex-col items-center gap-4">
                 <Card
-                  title="Construir e Capacitar um Time Comercial Eficaz"
+                  title="Vender sem precisar captar mais leads"
                   // description="Aproveite ao máximo a demanda que você já atrai e transforme visitantes em clientes fidelizados com técnicas comprovadas."
                   // description="Se você já tem uma boa lista de leads, mas não tem um time comercial para vender para ela, você precisa urgentemente "
-                  description="Prepare sua equipe para gerar vendas constantes e escaláveis. "
+                  description="Aproveite a lista que já tem e aumente o faturamento do seu negócio mesmo sem precisar investir em captar mais leads"
                 />
                 <Card
-                  title="Otimizar a Gestão de Leads:"
-                  description="Aproveite ao máximo cada interação em sua lista de leads e no Instagram para converter mais e melhor."
-                />
+                  title="Contornar objeções"
+                  description="Saiba como treinar seu time comercial para contornar qualquer tipo de objeção apresentada e venda muito mais."
+                  />
                 <Card
-                  title="Alcançar Vendas Recorrentes e Previsíveis"
-                  description="Estabeleça processos que garantam um fluxo de receita constante sem a sua intervenção diária."
+                  title="Trazer previsibilidade de faturamento para o seu negócio"
+                  description="Tenha previsibilidade e recorrência de vendas através de um time comercial treinado da forma correta"
                 />
               </div>
               <h4 className="text-base text-center text-[#141940]">Nesta live sexta-feira às 13h, irei te mostrar o passo a passo de como você pode, em pouco tempo, estruturar esse processo comercial acima</h4>
