@@ -45,7 +45,7 @@ export default function Page() {
                   description="Estabeleça processos que garantam um fluxo de receita constante sem a sua intervenção diária."
                 />
               </div>
-              <h4 className="text-base text-center text-[#141940]">Nesta live sexta-feira às 13h, irei te mostrar o passo a passo de como você pode, em pouco tempo, estruturar esse processo comercial acima</h4>
+              <h4 className="text-base text-center text-[#141940]">🔗 Junte-se a nós e transforme sua capacidade de liderar e crescer sua empresa sem estar sobrecarregado pelas operações cotidianas. Inscreva-se agora!</h4>
             </div>
           </div>
         </Section>
