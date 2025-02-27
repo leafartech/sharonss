@@ -115,6 +115,7 @@ export default function Page() {
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           isca={true}
+          funil="Live"
         />
       )}
     </div>

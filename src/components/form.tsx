@@ -6,6 +6,7 @@ type FormTypes = {
     isOpen: boolean
     setIsOpen: React.Dispatch<SetStateAction<boolean>>
     isca?: boolean
+    funil: string
 }
 
 type DataTypes = {
@@ -24,7 +25,7 @@ const initialData = {
     current_moment: '',
 }
 
-export default function Form({ isOpen, setIsOpen, isca }: FormTypes) {
+export default function Form({ isOpen, setIsOpen, isca, funil }: FormTypes) {
 
     const [data, setData] = useState<DataTypes>(initialData)
     const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -78,7 +79,8 @@ export default function Form({ isOpen, setIsOpen, isca }: FormTypes) {
                 utm_medium,
                 utm_content,
                 utm_term,
-                isca
+                isca,
+                funil: funil
             })
         }).then(async res => {
 
@@ -178,7 +180,7 @@ export default function Form({ isOpen, setIsOpen, isca }: FormTypes) {
         </div >
     )
 }
-export function FormLive({ isOpen, setIsOpen, isca }: FormTypes) {
+export function FormLive({ isOpen, setIsOpen, isca, funil }: FormTypes) {
 
     const [data, setData] = useState<DataTypes>(initialData)
     const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -232,14 +234,16 @@ export function FormLive({ isOpen, setIsOpen, isca }: FormTypes) {
                 utm_medium,
                 utm_content,
                 utm_term,
-                isca
+                isca,
+                funil
             })
         }).then(async res => {
 
             const response = await res.json()
 
             setIsLoading(false)
-            push('/obrigado')
+
+            push('/obrigado-semanal')
         }).catch(e => console.log(e))
     }
 

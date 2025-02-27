@@ -115,6 +115,7 @@ export default function Page() {
         <Form
           isOpen={isOpen}
           setIsOpen={setIsOpen}
+          funil="Sessão Estratégica"
         />
       )}
     </div>

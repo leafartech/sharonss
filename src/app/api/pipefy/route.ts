@@ -9,16 +9,16 @@ export async function POST(request: Request) {
 
     if (data.isca) {
 
-        await fetch(`https://hook.us1.make.com/zbxslc34hzygvye68c98xkgtqoejmb2u`, {
-            method: 'POST',
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-        })
+        // await fetch(`https://hook.us1.make.com/zbxslc34hzygvye68c98xkgtqoejmb2u`, {
+        //     method: 'POST',
+        //     headers: {
+        //         "Accept": "application/json",
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify(data),
+        // })
     }
-
+    
     await fetch(`https://api.pipefy.com/graphql`, {
         method: 'POST',
         headers: {
@@ -45,6 +45,7 @@ export async function POST(request: Request) {
                             { field_id: "copy_of_utm_source", field_value: "${data.utm_medium}" }
                             { field_id: "copy_of_utm_term", field_value: "${data.utm_content}" }
                             { field_id: "copy_of_copy_of_copy_of_utm_source", field_value: "${data.utm_term}" }                          
+                            { field_id: "funil", field_value: "${data.funil}" }                          
                         ],
                     }) {
                         card {

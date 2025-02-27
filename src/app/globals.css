@@ -22,6 +22,7 @@
   background-position: center;
   background-size: cover;
 }
+
 .img-bg {
   background-image: url('/images/bg-2.webp');
   background-repeat: no-repeat;
@@ -29,11 +30,41 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
 .bg-02 {
   background-image: url('/images/bg2.webp');
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+}
+
+.bg-live {
+  background-image: url('/images/bg-live-obrigado.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.grad-text {
+  background: linear-gradient(90deg, #cd5e71 0%, rgb(240, 112, 133) 50%, #aa4f5e 100%);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grad-loader {
+  background: linear-gradient(90deg, #cd5e71 0%, rgb(240, 112, 133) 50%, #aa4f5e 100%);
+}
+
+.btn-live-typ {
+  padding: 12px 0;
+  font-size: '24px';
+  background-color: transparent;
+  font-family: "Sora", Sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-image: linear-gradient(180deg, #12C92B 0%, #008011 100%);
+  border-radius: 8px 8px 8px 8px;
 }
 
 @media (max-width: 500px) {
@@ -43,6 +74,7 @@
     background-position: left;
     background-size: cover;
   }
+
   .img-bg {
     background-image: none
   }
@@ -53,14 +85,12 @@
 }
 
 .linear-02 {
-    background: linear-gradient(
-      to right,
+  background: linear-gradient(to right,
       #FFDB94 0%,
       #E8B44D 22%,
       #FFDB94 48%,
       #E8B44D 80%,
-      #82652B 100%
-    );
+      #82652B 100%);
 }
 
 .swiper {
@@ -69,9 +99,12 @@
 }
 
 .swiper .swiper-pagination-bullet {
-  background-color: #fff; /* Cor dos bullets */
+  background-color: #fff;
+  /* Cor dos bullets */
   transform: translateY(20px)
 }
+
 .swiper .swiper-pagination-bullet-active {
-  background-color: #fff; /* Cor do bullet ativo */
+  background-color: #fff;
+  /* Cor do bullet ativo */
 }
