@@ -146,10 +146,9 @@ export default function Form({ isOpen, setIsOpen, isca, funil }: FormTypes) {
                             onChange={(e) => handleChange('monthly_income', e)}
                         >
                             <option>Faturamento mensal</option>
-                            <option>Até 12k mensal</option>
-                            <option>13k a 30k mensal</option>
-                            <option>31k a 70k mensal</option>
-                            <option>Mais de 150k mensal</option>
+                            <option>15k a 20k</option>
+                            <option>21k a 100k</option>
+                            <option>Acima de 101k</option>
                         </select>
                         <select
                             className="w-full sm:max-w-sm border rounded py-1 px-4 text-sm font-thin outline-none focus:border-zinc-400"
