@@ -5,8 +5,8 @@ import "./globals.css";
 const sora = Sora({ subsets: ["latin"], weight: ['300', '400', '500', '600'] });
 
 export const metadata: Metadata = {
-  title: "Inscrição - Treinamento Duas por Uma",
-  description: "Duas por uma - Treinamento",
+  title: "Sharon Santos | Inscrição",
+  description: "Sharon Santos | Inscrição",
 };
 
 export default function RootLayout({
