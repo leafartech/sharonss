@@ -39,7 +39,6 @@ export async function POST(request: Request) {
                             { field_id: "telefone", field_value: "${data.phone}" }
                             { field_id: "faturamento_mensal", field_value: "${data.monthly_income}" }
                             { field_id: "faixa_de_faturamento", field_value: "${data.monthly_income}" }
-                            { field_id: "momento_atual", field_value: "${data.current_moment}" }
                             { field_id: "utm_source", field_value: "${data.utm_source}" }
                             { field_id: "copy_of_copy_of_utm_source", field_value: "${data.utm_campaign}" }
                             { field_id: "copy_of_utm_source", field_value: "${data.utm_medium}" }
