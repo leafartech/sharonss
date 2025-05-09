@@ -56,11 +56,7 @@ export async function POST(request: Request) {
                 }
             `,
         }),
-    }).then(async res => {
-
-        const response = await res.json()
-
-    }).catch(e => console.log(e))
+    })
 
     return NextResponse.json({})
 }
